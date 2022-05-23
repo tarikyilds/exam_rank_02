@@ -92,11 +92,7 @@ char    **wsplit(char *str)
             c = 0;
             new_item = (char *) malloc(sizeof(char) * 250);
             while (str[i] != '\0' && (str[i] != ' ' && str[i] > 13))
-            {
-                new_item[c] = str[i];
-                i++;
-                c++;
-            }
+                new_item[c++] = str[i++];
             new_item[c] = '\0';
             words[j] = new_item;
             j++;
@@ -107,6 +103,7 @@ char    **wsplit(char *str)
     return (words);
     
 }
+
 char    *str_birlestir(char *first, char *sec)
 {
     char    *dest;
@@ -124,36 +121,34 @@ char    *str_birlestir(char *first, char *sec)
     dest[i] = ' ';
     i++;
     while (sec[j] != '\0')
-    {
-        dest[i] = sec[j];
-        i++;
-        j++;
-    }
+        dest[i++] = sec[j++];
     dest[i] = '\0';
     return (dest);
 }
+
 int main(int arg, char **argc)
 {
     char    *str;
     char    **words;
     int     index;
-    int     c;
 
     if (arg > 1)
     {
         index = 0;
-        str = "Que la      lumiere soit et la lumiere fut";
-        //str = argc[1];
+        /*str = "Que la      lumiere soit et la lumiere fut";
+        str = "     AkjhZ zLKIJz , 23y";
+        (void)argc;*/
+        str = argc[1];
         str = ft_strtrim(str);
         words = wsplit(str);
         str[index] = '\0';
         index++;
-        while (words[index] != NULL){
-            str = str_birlestir(str, words[index]);
-            index++;
-        }
+        while (words[index] != NULL)
+            str = str_birlestir(str, words[index++]);
         str = str_birlestir(str, words[0]);
-        ft_putstr(str);
+        ft_putstr(ft_strtrim(str));
+        free(str);
+        free(words);
     }
     ft_putchar('\n');
     return (0);
