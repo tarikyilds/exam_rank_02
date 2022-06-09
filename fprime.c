@@ -1,5 +1,4 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include "examrank02.h"
 
 // 42 İstanbul (Tarık Yıldırım) - Login: tyildiri
 

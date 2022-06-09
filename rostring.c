@@ -1,6 +1,4 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<unistd.h>
+#include "examrank02.h"
 
 void    ft_putchar(int c)
 {

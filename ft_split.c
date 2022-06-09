@@ -1,5 +1,4 @@
-#include<stdlib.h>
-#include<stdio.h>
+#include "examrank02.h"
 
 int wcount(char *str)
 {

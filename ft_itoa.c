@@ -1,6 +1,4 @@
-#include<stdio.h>
-#include<unistd.h>
-#include<stdlib.h>
+#include "examrank02.h"
 
 int basamak_sayisi(int n)
 {
@@ -52,7 +50,7 @@ char    *ft_itoa(int nbr)
     dest[last] = '\0';
     return (dest);
 }
-
+/*
 int main(void)
 {
     char    *dest;
@@ -70,7 +68,7 @@ int main(void)
     dest = ft_itoa(-3);
     printf("Sonuç: %s\n", dest);
     return (0);
-}
+}*/
 
 
 
