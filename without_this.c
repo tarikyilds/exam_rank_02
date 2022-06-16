@@ -58,5 +58,5 @@ int without(int start, int len, int wto)
 
 int main(void)
 {
-    printf("Result: %d\n", without(0, 22, 2));
+    printf("Result: %d\n", without(0, 100, 1));
 }

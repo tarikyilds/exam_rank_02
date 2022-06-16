@@ -8,5 +8,7 @@
 int     ft_strlen(char *str);
 int     ft_putchar(int c);
 void    putstr(char *str);
-
+void    ft_putnbr(int nb);
+int     asciitoint(char *nb);
+int     check_alpha(char c);
 #endif
